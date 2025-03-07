@@ -61,7 +61,7 @@ export default function Home() {
               <MessageSquare className="h-4 w-4" /> Java Developer
             </span>
             <span className="flex items-center gap-2">
-              <MapPin className="h-4 w-4" /> Mumbai, Maharashtra
+              <MapPin className="h-4 w-4" /> Islamabad, Pakistan
             </span>
             <Button variant="outline" size="sm" className="gap-2 hover:bg-primary hover:text-primary-foreground transition-colors">
               <Linkedin className="h-4 w-4" /> Connect on LinkedIn
@@ -113,9 +113,9 @@ export default function Home() {
           <div className="space-y-6">
             <div className="relative pl-4 border-l border-primary/20">
               <div className="absolute w-2 h-2 bg-primary rounded-full -left-[4.5px] top-2" />
-              <h3 className="font-medium">BS in Information Technology (Hons)</h3>
-              <p className="text-muted-foreground text-sm">Somaiya Vidyavihar University - Mumbai, Maharashtra</p>
-              <p className="text-muted-foreground text-sm mb-2">Grade - 8.3 CGPA</p>
+              <h3 className="font-medium">BS in Information Technology</h3>
+              <p className="text-muted-foreground text-sm">Virtual University of Pakistan</p>
+              {/* <p className="text-muted-foreground text-sm mb-2">Grade - 8.3 CGPA</p> */}
               <ul className="list-disc list-inside text-sm space-y-1 text-muted-foreground">
                 <li>Developed a full-stack web application using Java, Spring Boot, and React.</li>
                 <li>Collaborated with a team of 4 to design and implement a RESTful API.</li>
@@ -126,7 +126,7 @@ export default function Home() {
             <div className="relative pl-4 border-l border-primary/20">
               <div className="absolute w-2 h-2 bg-primary rounded-full -left-[4.5px] top-2" />
               <h3 className="font-medium">HSC in Computer Science</h3>
-              <p className="text-muted-foreground text-sm">Prit Academy College - Mumbai, Maharashtra</p>
+              <p className="text-muted-foreground text-sm">Prit Academy College - Islamabad, Pakistan</p>
               <p className="text-muted-foreground text-sm">Grade - 73.50%</p>
             </div>
           </div>
