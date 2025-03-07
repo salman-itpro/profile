@@ -58,7 +58,7 @@ export default function Home() {
           </div>
           <div className="flex items-center justify-center gap-6 text-muted-foreground">
             <span className="flex items-center gap-2">
-              <MessageSquare className="h-4 w-4" /> Java Developer
+              <MessageSquare className="h-4 w-4" /> IT Support Specialist
             </span>
             <span className="flex items-center gap-2">
               <MapPin className="h-4 w-4" /> Islamabad, Pakistan
@@ -79,7 +79,7 @@ export default function Home() {
             About
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-            Hi, I'm Bhavesh, a dedicated Java developer with a passion for crafting efficient and user-friendly applications. With experience in web development and a strong foundation in IT, I specialize in building scalable solutions using Java, Spring Boot, and modern development practices. Let's connect and build something amazing together!
+          I am an experienced IT Support Specialist with over two years of expertise in firewall management (FortiGate, Sophos), virtualization (VMware ESXi, Veeam), and network security. My passion lies in optimizing IT infrastructure, troubleshooting hardware and software, and ensuring seamless technical support for end-users. I am proficient in configuring VPNs, VLANs, Active Directory, and IT asset management tools. My goal is to enhance system performance and security through innovative IT solutions.
           </p>
         </Card>
 
@@ -92,13 +92,34 @@ export default function Home() {
           <div className="space-y-6">
             <div className="relative pl-4 border-l border-primary/20">
               <div className="absolute w-2 h-2 bg-primary rounded-full -left-[4.5px] top-2" />
-              <h3 className="font-medium">Web Development Intern</h3>
-              <p className="text-muted-foreground text-sm">Prometheus Solutions</p>
-              <p className="text-muted-foreground text-sm mb-2">May 2023 - Jul 2023</p>
+              <h3 className="font-medium">IT Support Specialist</h3>
+              <p className="text-muted-foreground text-sm">Focus IT Services</p>
+              <p className="text-muted-foreground text-sm mb-2">Dec 2024 - Present</p>
               <ul className="list-disc list-inside text-sm space-y-1 text-muted-foreground">
-                <li>Assisted in .NET web application development using C#, ASP.NET, and SQL Server.</li>
-                <li>Contributed to debugging, code reviews, and feature implementation.</li>
-                <li>Conducted manual and automated testing to identify and resolve defects.</li>
+                <li>Administered FortiGate & Sophos firewalls for improved network security and remote connectivity.</li>
+                <li>Managed Active Directory & File Servers to enhance user authentication and secure data access.</li>
+                <li>Configured VLANs and LACP to optimize network segmentation and redundancy.</li>
+                <li>Implemented RAID storage solutions to ensure data protection.</li>
+                <li>Provided technical support to 150+ employees through a ticketing system, improving resolution times.</li>
+                <li>Maintained VMware ESXi hosts for virtualization and deployed Veeam Backup & Replication for disaster recovery.</li>
+                <li>Monitored networks using LibreNMS and tracked IT assets with Lansweeper & Freshservice.</li>
+              </ul>
+            </div>
+          </div>
+          <div className="space-y-6">
+            <div className="relative pl-4 border-l border-primary/20">
+              <div className="absolute w-2 h-2 bg-primary rounded-full -left-[4.5px] top-2" />
+              <h3 className="font-medium">IT Technician</h3>
+              <p className="text-muted-foreground text-sm">Foundation University</p>
+              <p className="text-muted-foreground text-sm mb-2">Jan 2022 - Jan 2023</p>
+              <ul className="list-disc list-inside text-sm space-y-1 text-muted-foreground">
+                <li>Managed internet access and bandwidth control using Sangfor IAM for optimal network efficiency.</li>
+                <li>Configured and maintained 30+ access points and routers, ensuring strong connectivity.</li>
+                <li>Provided on-site and remote IT support, resolving technical issues efficiently.</li>
+                <li>Installed and maintained IT hardware/software for labs, faculty, and staff.</li>
+                <li>Supported A/V equipment in lecture halls and conducted workshops and online meetings (Teams, Zoom).</li>
+                <li>Managed IT inventory and facilitated procurement requests.</li>
+                <li>Trained and mentored junior staff, boosting team performance.</li>
               </ul>
             </div>
           </div>
@@ -113,25 +134,26 @@ export default function Home() {
           <div className="space-y-6">
             <div className="relative pl-4 border-l border-primary/20">
               <div className="absolute w-2 h-2 bg-primary rounded-full -left-[4.5px] top-2" />
-              <h3 className="font-medium">BS in Information Technology</h3>
-              <p className="text-muted-foreground text-sm">Virtual University of Pakistan</p>
+              <h3 className="font-medium">Bachelor of Science in Information Technology</h3>
+              <p className="text-muted-foreground text-sm">Virtual University of Pakistan - Islamabad, Pakistan</p>
+              <p className="text-muted-foreground text-sm mb-2">Sep 2023 - Present</p>
               {/* <p className="text-muted-foreground text-sm mb-2">Grade - 8.3 CGPA</p> */}
-              <ul className="list-disc list-inside text-sm space-y-1 text-muted-foreground">
-                <li>Developed a full-stack web application using Java, Spring Boot, and React.</li>
-                <li>Collaborated with a team of 4 to design and implement a RESTful API.</li>
-                <li>Conducted manual and automated testing to identify and resolve defects.</li>
-              </ul>
             </div>
             <Separator className="my-4" />
             <div className="relative pl-4 border-l border-primary/20">
               <div className="absolute w-2 h-2 bg-primary rounded-full -left-[4.5px] top-2" />
-              <h3 className="font-medium">HSC in Computer Science</h3>
-              <p className="text-muted-foreground text-sm">Prit Academy College - Islamabad, Pakistan</p>
-              <p className="text-muted-foreground text-sm">Grade - 73.50%</p>
+              <h3 className="font-medium">Diploma Associate Engineering in Information & Communication Technology</h3>
+              <p className="text-muted-foreground text-sm">Construction Technology And Training Institute - Islamabad, Pakistan</p>
+              <p className="text-muted-foreground text-sm mb-2">Sep 2019 - Sep 2022</p>
+            </div>
+            <Separator className="my-4" />
+            <div className="relative pl-4 border-l border-primary/20">
+              <div className="absolute w-2 h-2 bg-primary rounded-full -left-[4.5px] top-2" />
+              <h3 className="font-medium">Matriculation in Computer Science</h3>
+              <p className="text-muted-foreground text-sm">Progressive Model School - Islamabad, Pakistan</p>
             </div>
           </div>
         </Card>
-
         {/* Skills Section */}
         <Card className="mb-8 p-6 hover:shadow-lg transition-shadow">
           <h2 className="text-xl font-semibold mb-4 flex items-center gap-2">

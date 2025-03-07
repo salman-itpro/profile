@@ -68,7 +68,7 @@ export default function CardPage() {
               </div>
               <div className="text-right">
                 <h2 className="text-xl font-bold">Salman Ahmed</h2>
-                <p className="text-sm text-muted-foreground">Java Developer</p>
+                <p className="text-sm text-muted-foreground">IT Support Specialist</p>
               </div>
             </div>
 
