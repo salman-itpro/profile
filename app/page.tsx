@@ -162,9 +162,9 @@ export default function Home() {
           </h2>
           <div className="space-y-6">
             <div>
-              <h3 className="font-medium mb-3 text-sm text-muted-foreground">Languages</h3>
+              <h3 className="font-medium mb-3 text-sm text-muted-foreground">IT Support & Troubleshooting:</h3>
               <div className="flex flex-wrap gap-2">
-                {["Java", "Kotlin", "Python", "SQL", "JavaScript"].map((skill) => (
+                {["Hardware/Software Diagnostics", "Root Cause Analysis", "Help Desk Support"].map((skill) => (
                   <Badge key={skill} variant="secondary" className="hover:bg-primary hover:text-primary-foreground transition-colors">
                     {skill}
                   </Badge>
@@ -172,9 +172,9 @@ export default function Home() {
               </div>
             </div>
             <div>
-              <h3 className="font-medium mb-3 text-sm text-muted-foreground">Frontend</h3>
+              <h3 className="font-medium mb-3 text-sm text-muted-foreground">Firewall Management:</h3>
               <div className="flex flex-wrap gap-2">
-                {["React", "Astro", "Bootstrap", "Tailwind CSS"].map((skill) => (
+                {["Sophos", "FortiGate", "Pfsense", "MikroTik"].map((skill) => (
                   <Badge key={skill} variant="secondary" className="hover:bg-primary hover:text-primary-foreground transition-colors">
                     {skill}
                   </Badge>
@@ -182,9 +182,9 @@ export default function Home() {
               </div>
             </div>
             <div>
-              <h3 className="font-medium mb-3 text-sm text-muted-foreground">Backend</h3>
+              <h3 className="font-medium mb-3 text-sm text-muted-foreground">Networking & Security</h3>
               <div className="flex flex-wrap gap-2">
-                {["Spring Boot", "Spring MVC", "Hibernate", "JPA"].map((skill) => (
+                {["TCP/IP", "DNS", "DHCP", "VPN", "VLANs", "Network Monitoring", "LibreNMS"].map((skill) => (
                   <Badge key={skill} variant="secondary" className="hover:bg-primary hover:text-primary-foreground transition-colors">
                     {skill}
                   </Badge>
@@ -192,9 +192,9 @@ export default function Home() {
               </div>
             </div>
             <div>
-              <h3 className="font-medium mb-3 text-sm text-muted-foreground">Tools</h3>
+              <h3 className="font-medium mb-3 text-sm text-muted-foreground">Systems & Virtualization:</h3>
               <div className="flex flex-wrap gap-2">
-                {["Git", "MySQL", "PostgreSQL", "Redis", "MongoDB"].map((skill) => (
+                {["Windows Server", "Linux Server", "MacOS", "VMware ESXi", "Hyper-V"].map((skill) => (
                   <Badge key={skill} variant="secondary" className="hover:bg-primary hover:text-primary-foreground transition-colors">
                     {skill}
                   </Badge>
@@ -204,7 +204,7 @@ export default function Home() {
             <div>
               <h3 className="font-medium mb-3 text-sm text-muted-foreground">Others</h3>
               <div className="flex flex-wrap gap-2">
-                {["AWS", "Azure", "Google Cloud", "Docker", "Fedora"].map((skill) => (
+                {["AWS", "Azure", "Google Cloud", "Docker", "Linux"].map((skill) => (
                   <Badge key={skill} variant="secondary" className="hover:bg-primary hover:text-primary-foreground transition-colors">
                     {skill}
                   </Badge>
