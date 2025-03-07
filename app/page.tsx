@@ -49,7 +49,7 @@ export default function Home() {
             />
             <div className="absolute inset-0 rounded-full bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </div>
-          <h1 className="text-4xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70">Bhavesh Mishra</h1>
+          <h1 className="text-4xl font-bold mb-2 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70">Salman Ahmed</h1>
           <div className="flex items-center justify-center gap-2 mb-4">
             <span className="flex items-center gap-2 px-3 py-1 rounded-full bg-green-500/10 text-green-500 text-sm font-medium">
               <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
@@ -202,7 +202,7 @@ export default function Home() {
         {/* Footer */}
         <footer className="mt-12 pt-8 border-t">
           <div className="flex items-center justify-between text-sm text-muted-foreground">
-            <p>© 2024 Bhavesh Mishra. All rights reserved.</p>
+            <p>© 2024 Salman Ahmed. All rights reserved.</p>
             <div className="flex items-center gap-4">
               <Mail className="h-4 w-4 hover:text-primary cursor-pointer transition-colors" />
               <MessageSquare className="h-4 w-4 hover:text-primary cursor-pointer transition-colors" />

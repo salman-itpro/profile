@@ -67,7 +67,7 @@ export default function CardPage() {
                 />
               </div>
               <div className="text-right">
-                <h2 className="text-xl font-bold">Bhavesh Mishra</h2>
+                <h2 className="text-xl font-bold">Salman Ahmed</h2>
                 <p className="text-sm text-muted-foreground">Java Developer</p>
               </div>
             </div>
@@ -122,7 +122,7 @@ export default function CardPage() {
         {/* Footer */}
         <footer className="mt-12 pt-8 border-t">
           <div className="text-center text-sm text-muted-foreground">
-            <p>© 2024 Bhavesh Mishra. All rights reserved.</p>
+            <p>© 2024 Salman Ahmed. All rights reserved.</p>
           </div>
         </footer>
       </div>
