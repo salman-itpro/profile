@@ -43,7 +43,7 @@ export default function Home() {
         <div className="text-center mb-12">
           <div className="w-32 h-32 mx-auto mb-4 relative group">
             <img
-              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+              src="https://media.licdn.com/dms/image/v2/D4D35AQFLpRVwJbDuqw/profile-framedphoto-shrink_200_200/profile-framedphoto-shrink_200_200/0/1711413561419?e=1741953600&v=beta&t=IZY2_dYT8pFkLidPmeymg949oLZjUpj7JJDECH7M1jk"
               alt="Profile"
               className="rounded-full w-full h-full object-cover ring-2 ring-primary/20 transition-all duration-300 group-hover:ring-primary/40"
             />
