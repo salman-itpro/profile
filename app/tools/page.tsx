@@ -2,7 +2,7 @@
 
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Moon, Sun, Laptop2, Brush, Wrench, Code, Brain, Pencil } from "lucide-react";
+import { Moon, Sun, Laptop2, Brush, Wrench, Code, Brain, Pencil, Cloud } from "lucide-react";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 
@@ -15,15 +15,15 @@ export default function ToolsPage() {
       { name: "Adobe XD", description: "UI/UX Design", icon: Brush },
     ],
     productivity: [
-      { name: "Arc", description: "Browser", icon: Laptop2 },
+      { name: "Packet Tracer", description: "Simulation", icon: Laptop2 },
+      { name: "Eve-NG", description: "Simulation", icon: Laptop2 },
       { name: "Notion", description: "Note Taking", icon: Pencil },
       { name: "Obsidian", description: "Long-form Writing", icon: Brain },
     ],
     development: [
       { name: "VS Code", description: "Code Editor", icon: Code },
-      { name: "IntelliJ IDEA", description: "Java IDE", icon: Code },
       { name: "Docker", description: "Containerization", icon: Wrench },
-      { name: "Postman", description: "API Testing", icon: Wrench },
+      { name: "VMware", description: "Virtulization", icon: Cloud },
     ],
   };
 

@@ -76,15 +76,15 @@ export default function CardPage() {
             <div className="space-y-2">
               <div className="flex items-center gap-2 text-sm">
                 <Mail className="h-4 w-4 text-primary" />
-                <span className="text-muted-foreground">contact@bhaveshmishra.dev</span>
+                <span className="text-muted-foreground">salman.itspecialist@gmail.com</span>
               </div>
               <div className="flex items-center gap-2 text-sm">
                 <Phone className="h-4 w-4 text-primary" />
-                <span className="text-muted-foreground">+91 98765 43210</span>
+                <span className="text-muted-foreground">+92 3406684081</span>
               </div>
               <div className="flex items-center gap-2 text-sm">
                 <Globe className="h-4 w-4 text-primary" />
-                <span className="text-muted-foreground">bhaveshmishra.dev</span>
+                <span className="text-muted-foreground">salman-itpro.vercel.app</span>
               </div>
               <div className="flex items-center gap-2 text-sm">
                 <MapPin className="h-4 w-4 text-primary" />
