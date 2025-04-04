@@ -43,7 +43,7 @@ export default function Home() {
         <div className="text-center mb-12">
           <div className="w-32 h-32 mx-auto mb-4 relative group">
             <img
-              src="https://media.licdn.com/dms/image/v2/D4D35AQFLpRVwJbDuqw/profile-framedphoto-shrink_200_200/profile-framedphoto-shrink_200_200/0/1711413561419?e=1741953600&v=beta&t=IZY2_dYT8pFkLidPmeymg949oLZjUpj7JJDECH7M1jk"
+              src="/profile.JPG"
               alt="Profile"
               className="rounded-full w-full h-full object-cover ring-2 ring-primary/20 transition-all duration-300 group-hover:ring-primary/40"
             />
@@ -224,7 +224,7 @@ export default function Home() {
         {/* Footer */}
         <footer className="mt-12 pt-8 border-t">
           <div className="flex items-center justify-between text-sm text-muted-foreground">
-            <p>© 2024 Salman Ahmed. All rights reserved.</p>
+            <p>© 2025 Salman Ahmed. All rights reserved.</p>
             <div className="flex items-center gap-4">
               <Mail className="h-4 w-4 hover:text-primary cursor-pointer transition-colors" />
               <MessageSquare className="h-4 w-4 hover:text-primary cursor-pointer transition-colors" />
