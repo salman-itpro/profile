@@ -63,9 +63,11 @@ export default function Home() {
             <span className="flex items-center gap-2">
               <MapPin className="h-4 w-4" /> Islamabad, Pakistan
             </span>
+            <Link href="https://www.linkedin.com/in/salman-itspecialist/">
             <Button variant="outline" size="sm" className="gap-2 hover:bg-primary hover:text-primary-foreground transition-colors">
               <Linkedin className="h-4 w-4" /> Connect on LinkedIn
             </Button>
+            </Link>
             <Button variant="outline" size="sm" className="gap-2 hover:bg-primary hover:text-primary-foreground transition-colors">
               <Github className="h-4 w-4" /> Github
             </Button>
