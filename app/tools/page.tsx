@@ -12,7 +12,7 @@ export default function ToolsPage() {
   const tools = {
     design: [
       { name: "Figma", description: "Design Tool", icon: Brush },
-      { name: "Adobe XD", description: "UI/UX Design", icon: Brush },
+      { name: "Solarwinds", description: "Network Diagram Software", icon: Brush },
     ],
     productivity: [
       { name: "Packet Tracer", description: "Simulation", icon: Laptop2 },
