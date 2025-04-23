@@ -56,22 +56,35 @@ export default function Home() {
               Open to work
             </span>
           </div>
-          <div className="flex items-center justify-center gap-6 text-muted-foreground">
-            <span className="flex items-center gap-2">
-              <MessageSquare className="h-4 w-4" /> IT Support Specialist
-            </span>
-            <span className="flex items-center gap-2">
-              <MapPin className="h-4 w-4" /> Islamabad, Pakistan
-            </span>
-            <Link href="https://www.linkedin.com/in/salman-itspecialist/">
-            <Button variant="outline" size="sm" className="gap-2 hover:bg-primary hover:text-primary-foreground transition-colors">
-              <Linkedin className="h-4 w-4" /> Connect on LinkedIn
-            </Button>
-            </Link>
-            <Button variant="outline" size="sm" className="gap-2 hover:bg-primary hover:text-primary-foreground transition-colors">
-              <Github className="h-4 w-4" /> Github
-            </Button>
-          </div>
+          <div className="flex flex-col items-center justify-center gap-4 text-muted-foreground sm:flex-row sm:flex-wrap sm:gap-6">
+  <div className="flex flex-col items-center gap-2 sm:flex-row sm:gap-6">
+    <span className="flex items-center gap-2">
+      <MessageSquare className="h-4 w-4" /> IT Support Specialist
+    </span>
+    <span className="flex items-center gap-2">
+      <MapPin className="h-4 w-4" /> Islamabad, Pakistan
+    </span>
+  </div>
+  <div className="flex flex-col items-center gap-2 sm:flex-row sm:gap-6">
+    <Link href="https://www.linkedin.com/in/salman-itspecialist/">
+      <Button
+        variant="outline"
+        size="sm"
+        className="gap-2 hover:bg-primary hover:text-primary-foreground transition-colors"
+      >
+        <Linkedin className="h-4 w-4" /> Connect on LinkedIn
+      </Button>
+    </Link>
+    <Button
+      variant="outline"
+      size="sm"
+      className="gap-2 hover:bg-primary hover:text-primary-foreground transition-colors"
+    >
+      <Github className="h-4 w-4" /> Github
+    </Button>
+  </div>
+</div>
+
         </div>
 
         {/* About Section */}
@@ -81,7 +94,7 @@ export default function Home() {
             About
           </h2>
           <p className="text-muted-foreground leading-relaxed">
-          I am an experienced IT Support Specialist with over two years of expertise in firewall management (FortiGate, Sophos), virtualization (VMware ESXi, Veeam), and network security. My passion lies in optimizing IT infrastructure, troubleshooting hardware and software, and ensuring seamless technical support for end-users. I am proficient in configuring VPNs, VLANs, Active Directory, and IT asset management tools. My goal is to enhance system performance and security through innovative IT solutions.
+            I am an experienced IT Support Specialist with over two years of expertise in firewall management (FortiGate, Sophos), virtualization (VMware ESXi, Veeam), and network security. My passion lies in optimizing IT infrastructure, troubleshooting hardware and software, and ensuring seamless technical support for end-users. I am proficient in configuring VPNs, VLANs, Active Directory, and IT asset management tools. My goal is to enhance system performance and security through innovative IT solutions.
           </p>
         </Card>
 
