@@ -46,7 +46,7 @@ const About = () => {
             Key <span className="gradient-text">Highlights</span>
           </h2>
           <p className="text-xl text-black dark:text-white leading-relaxed">
-            I am an IT Support Specialist with over two years of experience in firewall administration, 
+            I am an IT Support Specialist with over Three years of experience in firewall administration, 
             virtualization, and network security. Skilled in managing IT infrastructure, troubleshooting, 
             and end-user support for large organizations. Passionate about strengthening system performance 
             and reliability while staying up to date with evolving technologies.
