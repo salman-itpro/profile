@@ -138,7 +138,9 @@ const Footer = () => {
             I&apos;m excited to discuss how I can help optimize your IT infrastructure.
           </p>
           <motion.a
-            href="#contact"
+            href="/Salman-Ahmed-Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="inline-flex items-center space-x-2 bg-white text-primary-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-200"

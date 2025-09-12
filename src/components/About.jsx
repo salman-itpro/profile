@@ -33,8 +33,26 @@ const About = () => {
   ]
 
   return (
-    <section id="about" className="py-20 bg-white dark:bg-gray-800">
-      <div className="container-max section-padding">
+    <section id="about" className="py-20 bg-white dark:bg-gray-800 relative overflow-hidden">
+      {/* Cyber Grid Network Animation */}
+      <div className="absolute inset-0 pointer-events-none z-0">
+        {/* Main grid lines with smooth transition */}
+        <div className="absolute inset-0 opacity-30 dark:opacity-20 blur-sm transition-smooth">
+          <div className="grid-lines-horizontal"></div>
+          <div className="grid-lines-vertical"></div>
+        </div>
+        
+        {/* Enhanced fade out gradient with dissolve effect */}
+        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-white via-white/90 via-white/60 to-transparent dark:from-gray-800 dark:via-gray-800/90 dark:via-gray-800/60 dark:to-transparent pointer-events-none transition-dissolve">
+          {/* Subtle grid fade overlay */}
+          <div className="absolute inset-0 opacity-10 dark:opacity-5">
+            <div className="grid-lines-horizontal"></div>
+            <div className="grid-lines-vertical"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div className="container-max section-padding relative z-10">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}

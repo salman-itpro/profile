@@ -12,6 +12,7 @@ import Certifications from './components/Certifications'
 import Stats from './components/Stats'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import ScrollButton from './components/ScrollButton'
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Contact />
         </main>
         <Footer />
+        <ScrollButton />
       </div>
     </DarkModeProvider>
   )

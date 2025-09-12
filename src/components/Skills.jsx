@@ -132,8 +132,32 @@ const Skills = () => {
     : skillCategories.filter(skill => skill.category === activeFilter)
 
   return (
-    <section id="skills" className="py-20 bg-gray-50 dark:bg-gray-900">
-      <div className="container-max section-padding">
+    <section id="skills" className="py-20 bg-gray-50 dark:bg-gray-900 relative overflow-hidden">
+      {/* Enhanced transition from grid to blur */}
+      <div className="absolute inset-0 pointer-events-none z-0">
+        {/* Fade in grid at top with dissolve effect */}
+        <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-gray-50 via-gray-50/90 via-gray-50/60 to-transparent dark:from-gray-900 dark:via-gray-900/90 dark:via-gray-900/60 dark:to-transparent pointer-events-none transition-dissolve">
+          <div className="absolute inset-0 opacity-15 dark:opacity-10 blur-sm">
+            <div className="grid-lines-horizontal"></div>
+            <div className="grid-lines-vertical"></div>
+          </div>
+        </div>
+        
+        {/* Main blur effect with smooth scaling */}
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-50/30 via-transparent to-red-50/30 dark:from-orange-900/20 dark:via-transparent dark:to-red-900/20 blur-3xl transition-smooth"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-orange-200/20 dark:bg-orange-800/20 rounded-full blur-3xl transition-smooth scale-in"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-red-200/20 dark:bg-red-800/20 rounded-full blur-3xl transition-smooth scale-in"></div>
+        
+        {/* Fade out grid at bottom with dissolve effect */}
+        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-gray-50 via-gray-50/90 via-gray-50/60 to-transparent dark:from-gray-900 dark:via-gray-900/90 dark:via-gray-900/60 dark:to-transparent pointer-events-none transition-dissolve">
+          <div className="absolute inset-0 opacity-15 dark:opacity-10 blur-sm">
+            <div className="grid-lines-horizontal"></div>
+            <div className="grid-lines-vertical"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div className="container-max section-padding relative z-10">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
@@ -266,7 +290,7 @@ const Skills = () => {
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold mb-4">Professional Expertise</h3>
               <p className="text-lg opacity-90 leading-relaxed">
-                With over two years of hands-on experience, I bring comprehensive knowledge 
+                With over three years of hands-on experience, I bring comprehensive knowledge 
                 in IT infrastructure management, network security, and user support.
               </p>
             </div>

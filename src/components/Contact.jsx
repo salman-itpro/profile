@@ -28,8 +28,8 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Phone',
-      value: '+92 300 123 4567',
-      link: 'tel:+923001234567',
+      value: '+92 3705813618',
+      link: 'tel:+923705813618',
       copyable: true
     },
     {
@@ -42,8 +42,32 @@ const Contact = () => {
   ]
 
   return (
-    <section id="contact" className="py-20 bg-white dark:bg-gray-800">
-      <div className="container-max section-padding">
+    <section id="contact" className="py-20 bg-white dark:bg-gray-800 relative overflow-hidden">
+      {/* Enhanced transition from grid to blur */}
+      <div className="absolute inset-0 pointer-events-none z-0">
+        {/* Fade in grid at top with dissolve effect */}
+        <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-gray-50 via-gray-50/90 via-gray-50/60 to-transparent dark:from-gray-900 dark:via-gray-900/90 dark:via-gray-900/60 dark:to-transparent pointer-events-none transition-dissolve">
+          <div className="absolute inset-0 opacity-15 dark:opacity-10 blur-sm">
+            <div className="grid-lines-horizontal"></div>
+            <div className="grid-lines-vertical"></div>
+          </div>
+        </div>
+        
+        {/* Main blur effect with smooth scaling */}
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-50/30 via-transparent to-blue-50/30 dark:from-cyan-900/20 dark:via-transparent dark:to-blue-900/20 blur-3xl transition-smooth"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-200/20 dark:bg-cyan-800/20 rounded-full blur-3xl transition-smooth scale-in"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-blue-200/20 dark:bg-blue-800/20 rounded-full blur-3xl transition-smooth scale-in"></div>
+        
+        {/* Fade out grid at bottom with dissolve effect */}
+        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-white via-white/90 via-white/60 to-transparent dark:from-gray-800 dark:via-gray-800/90 dark:via-gray-800/60 dark:to-transparent pointer-events-none transition-dissolve">
+          <div className="absolute inset-0 opacity-15 dark:opacity-10 blur-sm">
+            <div className="grid-lines-horizontal"></div>
+            <div className="grid-lines-vertical"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div className="container-max section-padding relative z-10">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
@@ -121,7 +145,7 @@ const Contact = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
           >
             <motion.a
-              href="mailto:salman.itspecialist@gmail.com"
+              href="mailto:salman.itspecialist@gmail.com?subject=Let's Connect - IT Support Inquiry&body=Hi Salman,%0D%0A%0D%0AI hope this email finds you well. I came across your portfolio and would like to discuss potential opportunities or collaboration.%0D%0A%0D%0APlease let me know your availability for a conversation.%0D%0A%0D%0ABest regards,"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-primary-600 text-white px-8 py-4 rounded-full font-medium hover:bg-primary-700 transition-colors duration-200 text-center flex items-center justify-center space-x-2"
@@ -130,7 +154,7 @@ const Contact = () => {
               <span>Let&apos;s Connect</span>
             </motion.a>
             <motion.a
-              href="/resume.pdf"
+              href="/Salman-Ahmed-Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}

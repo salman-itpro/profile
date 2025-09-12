@@ -19,7 +19,7 @@ const Stats = () => {
   const stats = useMemo(() => [
     {
       icon: Clock,
-      value: 2,
+      value: 3,
       suffix: '+',
       label: 'Years Experience',
       color: 'from-blue-500 to-blue-600'
@@ -80,8 +80,26 @@ const Stats = () => {
   }, [inView, stats])
 
   return (
-    <section className="py-20 bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800">
-      <div className="container-max section-padding">
+    <section className="py-20 bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 relative overflow-hidden">
+      {/* Cyber Grid Network Animation */}
+      <div className="absolute inset-0 pointer-events-none z-0">
+        {/* Main grid lines with smooth transition */}
+        <div className="absolute inset-0 opacity-20 blur-sm transition-smooth">
+          <div className="grid-lines-horizontal"></div>
+          <div className="grid-lines-vertical"></div>
+        </div>
+        
+        {/* Enhanced fade out gradient with dissolve effect */}
+        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-primary-600/90 via-primary-600/70 via-primary-600/40 to-transparent pointer-events-none transition-dissolve">
+          {/* Subtle grid fade overlay */}
+          <div className="absolute inset-0 opacity-10">
+            <div className="grid-lines-horizontal"></div>
+            <div className="grid-lines-vertical"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div className="container-max section-padding relative z-10">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}

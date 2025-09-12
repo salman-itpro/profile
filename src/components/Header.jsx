@@ -25,6 +25,15 @@ const Header = () => {
     { name: 'Contact', href: '#contact' },
   ]
 
+  const scrollToTop = () => {
+    // Instant scroll to top
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    })
+  }
+
   return (
     <motion.header
       initial={{ y: -100 }}
@@ -39,19 +48,20 @@ const Header = () => {
       <div className="container-max section-padding">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            animate={{ 
-              scale: scrolled ? 0.95 : 1,
-              transition: { duration: 0.3 }
-            }}
-            className="flex items-center space-x-2"
+          <button
+            onClick={scrollToTop}
+            className="flex items-center space-x-2 cursor-pointer focus:outline-none rounded-lg p-1 transition-all duration-200 hover:scale-105 active:scale-95"
+            aria-label="Go to top of page"
           >
-            <div className="w-8 h-8 bg-gradient-to-r from-primary-600 to-primary-800 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">SA</span>
+            <div className="w-8 h-8 rounded-lg flex items-center justify-center overflow-hidden">
+              <img 
+                src="/logo.png" 
+                alt="Salman Ahmed" 
+                className="w-full h-full object-contain"
+              />
             </div>
             <span className="font-bold text-xl gradient-text">Salman Ahmed</span>
-          </motion.div>
+          </button>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">

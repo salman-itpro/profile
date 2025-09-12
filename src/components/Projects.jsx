@@ -124,8 +124,32 @@ const Projects = () => {
     : projects.filter(project => project.category === activeFilter)
 
   return (
-    <section id="projects" className="py-20 bg-white dark:bg-gray-800">
-      <div className="container-max section-padding">
+    <section id="projects" className="py-20 bg-white dark:bg-gray-800 relative overflow-hidden">
+      {/* Enhanced transition from grid to blur */}
+      <div className="absolute inset-0 pointer-events-none z-0">
+        {/* Fade in grid at top with dissolve effect */}
+        <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-white via-white/90 via-white/60 to-transparent dark:from-gray-800 dark:via-gray-800/90 dark:via-gray-800/60 dark:to-transparent pointer-events-none transition-dissolve">
+          <div className="absolute inset-0 opacity-15 dark:opacity-10 blur-sm">
+            <div className="grid-lines-horizontal"></div>
+            <div className="grid-lines-vertical"></div>
+          </div>
+        </div>
+        
+        {/* Main blur effect with smooth scaling */}
+        <div className="absolute inset-0 bg-gradient-to-br from-green-50/30 via-transparent to-teal-50/30 dark:from-green-900/20 dark:via-transparent dark:to-teal-900/20 blur-3xl transition-smooth"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-green-200/20 dark:bg-green-800/20 rounded-full blur-3xl transition-smooth scale-in"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-teal-200/20 dark:bg-teal-800/20 rounded-full blur-3xl transition-smooth scale-in"></div>
+        
+        {/* Fade out grid at bottom with dissolve effect */}
+        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-white via-white/90 via-white/60 to-transparent dark:from-gray-800 dark:via-gray-800/90 dark:via-gray-800/60 dark:to-transparent pointer-events-none transition-dissolve">
+          <div className="absolute inset-0 opacity-15 dark:opacity-10 blur-sm">
+            <div className="grid-lines-horizontal"></div>
+            <div className="grid-lines-vertical"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div className="container-max section-padding relative z-10">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 50 }}
