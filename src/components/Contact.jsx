@@ -144,15 +144,27 @@ const Contact = () => {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
           >
-            <motion.a
-              href="mailto:salman.itspecialist@gmail.com?subject=Let's Connect - IT Support Inquiry&body=Hi Salman,%0D%0A%0D%0AI hope this email finds you well. I came across your portfolio and would like to discuss potential opportunities or collaboration.%0D%0A%0D%0APlease let me know your availability for a conversation.%0D%0A%0D%0ABest regards,"
+            <motion.button
+              onClick={() => {
+                // Show popup message
+                alert('Redirecting to Gmail... Your email will be pre-filled with my contact information!');
+                
+                // Try to open Gmail in new tab
+                const gmailWindow = window.open('https://mail.google.com/mail/?view=cm&fs=1&to=salman.itspecialist@gmail.com&su=Let\'s Connect - IT Support Inquiry&body=Hi Salman,%0D%0A%0D%0AI hope this email finds you well. I came across your portfolio and would like to discuss potential opportunities or collaboration.%0D%0A%0D%0APlease let me know your availability for a conversation.%0D%0A%0D%0ABest regards,', '_blank');
+                
+                // Check if popup was blocked
+                if (!gmailWindow || gmailWindow.closed || typeof gmailWindow.closed === 'undefined') {
+                  // Popup was blocked, show fallback message
+                  alert('Popup blocked! Please allow popups for this site, or manually copy my email: salman.itspecialist@gmail.com');
+                }
+              }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-primary-600 text-white px-8 py-4 rounded-full font-medium hover:bg-primary-700 transition-colors duration-200 text-center flex items-center justify-center space-x-2"
             >
               <Mail className="w-5 h-5" />
               <span>Let&apos;s Connect</span>
-            </motion.a>
+            </motion.button>
             <motion.a
               href="/Salman-Ahmed-Resume.pdf"
               target="_blank"
