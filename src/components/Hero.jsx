@@ -162,12 +162,33 @@ const Hero = () => {
               >
                 <Github className="w-6 h-6 text-dark-700" />
               </a>
-              <a
-                href="mailto:salman.itspecialist@gmail.com"
-                className="p-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              <button
+                onClick={() => {
+                  // Check if mobile device
+                  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                  
+                  if (isMobile) {
+                    // For mobile, use mailto with simpler approach
+                    window.location.href = 'mailto:salman.itspecialist@gmail.com?subject=Let\'s Connect - IT Support Inquiry&body=Hi Salman,%0D%0A%0D%0AI hope this email finds you well. I came across your portfolio and would like to discuss potential opportunities or collaboration.%0D%0A%0D%0APlease let me know your availability for a conversation.%0D%0A%0D%0ABest regards,';
+                  } else {
+                    // For desktop, show popup message
+                    alert('Redirecting to Gmail... Your email will be pre-filled with my contact information!');
+                    
+                    // Try to open Gmail in new tab
+                    const gmailWindow = window.open('https://mail.google.com/mail/?view=cm&fs=1&to=salman.itspecialist@gmail.com&su=Let\'s Connect - IT Support Inquiry&body=Hi Salman,%0D%0A%0D%0AI hope this email finds you well. I came across your portfolio and would like to discuss potential opportunities or collaboration.%0D%0A%0D%0APlease let me know your availability for a conversation.%0D%0A%0D%0ABest regards,', '_blank');
+                    
+                    // Check if popup was blocked
+                    if (!gmailWindow || gmailWindow.closed || typeof gmailWindow.closed === 'undefined') {
+                      // Popup was blocked, show fallback message
+                      alert('Popup blocked! Please allow popups for this site, or manually copy my email: salman.itspecialist@gmail.com');
+                    }
+                  }
+                }}
+                className="p-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 cursor-pointer"
+                title="Send me an email with pre-filled message"
               >
                 <Mail className="w-6 h-6 text-primary-600" />
-              </a>
+              </button>
             </motion.div>
 
             {/* CTA Buttons */}
