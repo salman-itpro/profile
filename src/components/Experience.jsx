@@ -155,19 +155,37 @@ const Experience = () => {
               onClick={() => setSelectedExperience(exp)}
             >
               {/* Experience Header */}
-              <div className="h-32 bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-800 dark:to-primary-900 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-primary-600 to-primary-800 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
+              <div className="h-32 bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-800 dark:to-primary-900 flex flex-col items-center justify-center p-3 group-hover:scale-105 transition-transform duration-300">
+                {exp.company === 'Futurenostics' ? (
+                  <img 
+                    src="/futurenostics-logo.png" 
+                    alt="FutureNostics Logo" 
+                    className="w-full h-24 object-contain mb-1"
+                  />
+                ) : exp.company === 'Focus IT Services' ? (
+                  <img 
+                    src="/focusit-logo.png" 
+                    alt="Focus IT Services Logo" 
+                    className="w-full h-24 object-contain mb-1"
+                  />
+                ) : exp.company === 'Foundation University' ? (
+                  <img 
+                    src="/fusst-logo.png" 
+                    alt="Foundation University Logo" 
+                    className="w-full h-24 object-contain mb-1"
+                  />
+                ) : (
+                  <div className="w-16 h-16 bg-gradient-to-r from-primary-600 to-primary-800 rounded-xl flex items-center justify-center mb-1">
                     <Building2 className="w-8 h-8 text-white" />
                   </div>
-                  <div className="flex items-center justify-center space-x-2">
-                    <span className="text-lg font-bold text-primary-800 dark:text-primary-200">{exp.company}</span>
-                    {exp.type === 'Current' && (
-                      <span className="bg-green-100 text-green-800 dark:bg-green-800 dark:text-green-200 text-xs font-medium px-2 py-1 rounded-full">
-                        Current
-                      </span>
-                    )}
-                  </div>
+                )}
+                <div className="flex items-center justify-center space-x-2">
+                  <span className="text-lg font-bold text-primary-800 dark:text-primary-200">{exp.company}</span>
+                  {exp.type === 'Current' && (
+                    <span className="bg-green-100 text-green-800 dark:bg-green-800 dark:text-green-200 text-xs font-medium px-2 py-1 rounded-full">
+                      Current
+                    </span>
+                  )}
                 </div>
               </div>
 

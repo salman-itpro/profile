@@ -5,22 +5,16 @@ import { ChevronDown, ChevronUp } from 'lucide-react'
 const ScrollButton = () => {
   const [isVisible, setIsVisible] = useState(false)
   const [isAtTop, setIsAtTop] = useState(true)
-  const [isAtBottom, setIsAtBottom] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY
-      const windowHeight = window.innerHeight
-      const documentHeight = document.documentElement.scrollHeight
       
       // Show button when scrolled down a bit
       setIsVisible(scrollY > 100)
       
       // Check if at top
       setIsAtTop(scrollY < 50)
-      
-      // Check if at bottom (with some tolerance)
-      setIsAtBottom(scrollY + windowHeight >= documentHeight - 100)
     }
 
     window.addEventListener('scroll', handleScroll)
