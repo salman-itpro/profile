@@ -8,7 +8,6 @@ import {
   Cloud, 
   Settings,
   Database,
-  Lock,
   Users
 } from 'lucide-react'
 
@@ -84,8 +83,7 @@ const Skills = () => {
         { name: 'Microsoft Azure', level: 75, description: 'Virtual machines, networking, security groups' },
         { name: 'AWS Fundamentals', level: 70, description: 'EC2, VPC, IAM, basic services' },
         { name: 'Docker Basics', level: 65, description: 'Containerization, Docker Compose, basic orchestration' },
-        { name: 'CI/CD Pipelines', level: 60, description: 'GitHub Actions, automated deployments' },
-        { name: 'Infrastructure as Code', level: 55, description: 'Terraform basics, resource provisioning' }
+        
       ]
     },
     {
@@ -107,24 +105,11 @@ const Skills = () => {
       category: 'Infrastructure',
       level: 'Intermediate',
       skills: [
-        { name: 'SQL Server', level: 75, description: 'Database administration, backup, maintenance' },
-        { name: 'MySQL', level: 70, description: 'Database design, queries, optimization' },
         { name: 'Backup Solutions', level: 85, description: 'Veeam, Windows Backup, cloud backups' },
         { name: 'Data Recovery', level: 80, description: 'File recovery, system restore, disaster recovery' }
       ]
     },
-    {
-      title: 'Security & Compliance',
-      icon: Lock,
-      category: 'Security',
-      level: 'Advanced',
-      skills: [
-        { name: 'Endpoint Security', level: 88, description: 'Antivirus, EDR, device encryption' },
-        { name: 'Email Security', level: 85, description: 'Spam filtering, phishing protection, DLP' },
-        { name: 'Access Control', level: 90, description: 'RBAC, MFA, privileged access management' },
-        { name: 'Security Auditing', level: 82, description: 'Compliance checks, vulnerability assessments' }
-      ]
-    }
+    
   ]
 
   const filteredSkills = activeFilter === 'All' 
@@ -309,7 +294,7 @@ const Skills = () => {
                 <div className="text-sm opacity-90">Access Points Managed</div>
               </div>
               <div>
-                <div className="text-3xl font-bold mb-2">8</div>
+                <div className="text-3xl font-bold mb-2">7</div>
                 <div className="text-sm opacity-90">Skill Categories</div>
               </div>
             </div>
