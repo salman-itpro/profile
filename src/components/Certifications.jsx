@@ -17,7 +17,7 @@ const Certifications = () => {
       description: 'Fundamental networking concepts, protocols, and technologies',
       skills: ['Network Fundamentals', 'IP Addressing', 'Subnetting', 'OSI Model'],
       badge: 'https://images.credly.com/images/00634f82-b07f-4bbd-a85bb-c65351e202bd/CCNAITN-600x600.png',
-      verifyUrl: 'https://www.credly.com/badges/ccna-introduction-to-networks',
+      verifyUrl: 'https://www.credly.com/badges/0bd8951a-4ae1-4fca-bee4-855f9323bd05/public_url',
       date: '2023'
     },
     {
@@ -27,7 +27,7 @@ const Certifications = () => {
       description: 'Advanced switching, routing protocols, and wireless technologies',
       skills: ['VLANs', 'STP', 'EIGRP', 'OSPF', 'Wireless Networks'],
       badge: 'https://images.credly.com/images/00634f82-b07f-4bbd-a85bb-c65351e202bd/CCNASRWE-600x600.png',
-      verifyUrl: 'https://www.credly.com/badges/ccna-switching-routing-wireless',
+      verifyUrl: 'https://www.credly.com/badges/fac34172-6319-452a-9e62-d065018fc3d3/public_url',
       date: '2023'
     },
     {
@@ -37,7 +37,7 @@ const Certifications = () => {
       description: 'Enterprise networking, security, and network automation',
       skills: ['Enterprise Networks', 'Network Security', 'Automation', 'SDN'],
       badge: 'https://images.credly.com/images/00634f82-b07f-4bbd-a85bb-c65351e202bd/CCNAENSA-600x600.png',
-      verifyUrl: 'https://www.credly.com/badges/ccna-enterprise-networking-security',
+      verifyUrl: 'https://www.credly.com/badges/a1dcbad4-4729-456f-b1ff-eea4fa184304/public_url',
       date: '2024'
     },
     {
@@ -47,7 +47,7 @@ const Certifications = () => {
       description: 'Cybersecurity fundamentals and best practices',
       skills: ['Security Fundamentals', 'Threat Analysis', 'Risk Management', 'Security Policies'],
       badge: 'https://images.credly.com/images/00634f82-b07f-4bbd-a85bb-c65351e202bd/IntroCybersecurity-600x600.png',
-      verifyUrl: 'https://www.credly.com/badges/introduction-to-cybersecurity',
+      verifyUrl: 'https://www.credly.com/badges/c78d32d1-95d0-4b21-8a47-af18fc794a4d/public_url',
       date: '2023'
     }
   ]
