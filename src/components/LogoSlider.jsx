@@ -61,6 +61,26 @@ const LogoSlider = memo(() => {
       name: 'pfSense',
       src: '/Pfsense.png',
       alt: 'pfSense logo'
+    },
+    {
+      name: 'Fortinet',
+      src: '/fortinet.png',
+      alt: 'Fortinet logo'
+    },
+    {
+      name: 'Sophos',
+      src: '/sophos.png',
+      alt: 'Sophos logo'
+    },
+    {
+      name: 'Linux',
+      src: '/linux-seeklogo.png',
+      alt: 'Linux logo'
+    },
+    {
+      name: 'Azure',
+      src: '/azure.png',
+      alt: 'Microsoft Azure logo'
     }
   ]
 
