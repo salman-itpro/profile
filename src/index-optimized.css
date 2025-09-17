@@ -1,0 +1,154 @@
+/* stylelint-disable at-rule-no-unknown */
+/* eslint-disable */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optimized Animations - Consolidated */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { 
+    opacity: 0; 
+    transform: scale(0.95); 
+  }
+  to { 
+    opacity: 1; 
+    transform: scale(1); 
+  }
+}
+
+@keyframes dissolveIn {
+  from { 
+    opacity: 0; 
+    transform: scale(0.9) translateY(20px); 
+    filter: blur(10px);
+  }
+  to { 
+    opacity: 1; 
+    transform: scale(1) translateY(0); 
+    filter: blur(0);
+  }
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes blob {
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+
+@keyframes grid-move-horizontal {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 50px; }
+}
+
+@keyframes grid-move-vertical {
+  0% { background-position: 0 0; }
+  100% { background-position: 50px 0; }
+}
+
+/* Optimized Transition Classes */
+.transition-smooth {
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.transition-dissolve {
+  transition: all 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.fade-in { animation: fadeIn 0.7s ease-out forwards; }
+.scale-in { animation: scaleIn 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; }
+.dissolve-in { animation: dissolveIn 0.75s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards; }
+.animate-scroll { animation: scroll 20s linear infinite; }
+.animate-blob { animation: blob 7s infinite; }
+
+/* Base Styles */
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Custom Components */
+@layer components {
+  .container-max {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section-padding {
+    @apply py-16 lg:py-20;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-600 via-primary-700 to-primary-800 bg-clip-text text-transparent;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-primary-700 transition-colors duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-white dark:bg-gray-800 text-gray-900 dark:text-white px-6 py-3 rounded-lg font-medium border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200;
+  }
+}
+
+/* Grid Lines */
+.grid-lines-horizontal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(to bottom, rgba(59, 130, 246, 0.6) 2px, transparent 2px);
+  background-size: 100% 50px;
+  animation: grid-move-horizontal 60s linear infinite;
+}
+
+.grid-lines-vertical {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(to right, rgba(59, 130, 246, 0.6) 2px, transparent 2px);
+  background-size: 50px 100%;
+  animation: grid-move-vertical 80s linear infinite;
+}
+
+/* Animation Delays */
+.animation-delay-2000 { animation-delay: 2s; }
+.animation-delay-4000 { animation-delay: 4s; }
+
+/* Performance Optimizations */
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

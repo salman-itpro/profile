@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useMemo } from 'react'
+import React, { useState, useEffect, useMemo, memo } from 'react'
 import { motion } from 'framer-motion'
 import { MapPin, ExternalLink, Github, Linkedin, Mail, FileText, Download } from 'lucide-react'
 
-const Hero = () => {
+const Hero = memo(() => {
   const [currentRole, setCurrentRole] = useState(0)
   const [displayedText, setDisplayedText] = useState('')
   const [isDeleting, setIsDeleting] = useState(false)
@@ -253,6 +253,9 @@ const Hero = () => {
       </div>
     </section>
   )
-}
+})
+
+Hero.displayName = 'Hero'
+
 export default Hero
 

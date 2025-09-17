@@ -1,9 +1,9 @@
-import React, { useState, useEffect, useMemo } from 'react'
+import React, { useState, useEffect, useMemo, memo, useCallback } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { Users, Clock, Wifi, Award } from 'lucide-react'
 
-const Stats = () => {
+const Stats = memo(() => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1
@@ -47,37 +47,46 @@ const Stats = () => {
     }
   ], [])
 
+  const animateCount = useCallback((targetValue, key) => {
+    const duration = 2000
+    const steps = 60
+    const stepDuration = duration / steps
+    let currentStep = 0
+
+    const timer = setInterval(() => {
+      currentStep++
+      const progress = currentStep / steps
+      const currentValue = Math.floor(targetValue * progress)
+
+      setCounts(prev => ({
+        ...prev,
+        [key]: currentValue
+      }))
+
+      if (currentStep >= steps) {
+        clearInterval(timer)
+        setCounts(prev => ({
+          ...prev,
+          [key]: targetValue
+        }))
+      }
+    }, stepDuration)
+
+    return timer
+  }, [])
+
   useEffect(() => {
     if (inView) {
-      const duration = 2000 // 2 seconds
-      const steps = 60
-      const stepDuration = duration / steps
-
-      stats.forEach((stat, index) => {
-        const targetValue = stat.value
-        let currentStep = 0
-
-        const timer = setInterval(() => {
-          currentStep++
-          const progress = currentStep / steps
-          const currentValue = Math.floor(targetValue * progress)
-
-          setCounts(prev => ({
-            ...prev,
-            [index === 0 ? 'experience' : index === 1 ? 'users' : index === 2 ? 'accessPoints' : 'certifications']: currentValue
-          }))
-
-          if (currentStep >= steps) {
-            clearInterval(timer)
-            setCounts(prev => ({
-              ...prev,
-              [index === 0 ? 'experience' : index === 1 ? 'users' : index === 2 ? 'accessPoints' : 'certifications']: targetValue
-            }))
-          }
-        }, stepDuration)
+      const timers = stats.map((stat, index) => {
+        const key = index === 0 ? 'experience' : index === 1 ? 'users' : index === 2 ? 'accessPoints' : 'certifications'
+        return animateCount(stat.value, key)
       })
+
+      return () => {
+        timers.forEach(timer => clearInterval(timer))
+      }
     }
-  }, [inView, stats])
+  }, [inView, stats, animateCount])
 
   return (
     <section className="py-20 bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800 relative overflow-hidden">
@@ -164,6 +173,8 @@ const Stats = () => {
       </div>
     </section>
   )
-}
+})
+
+Stats.displayName = 'Stats'
 
 export default Stats
